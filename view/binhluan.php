@@ -63,7 +63,7 @@ $dsbl = loadall_binhluan($idpro);
                 $noidung = $_POST['noidung'];
                 $iduser = $_SESSION['email']['id'];
                 $idpro = $_POST['idpro'];
-                $ngaybinhluan = date('H:i:s Y-m-d');
+                $ngaybinhluan = date('Y-m-d H:i:s');
                 insert_binhluan($noidung, $iduser, $idpro, $ngaybinhluan);
             } else {
                 echo "dang nhap de binh luan";

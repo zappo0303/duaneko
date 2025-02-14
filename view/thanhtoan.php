@@ -69,13 +69,12 @@
                             </div>
                             <div class="col-md-12">
                                 <label for="kh_diachi">Địa chỉ</label>
-                                <input type="text" class="form-control" name="diachi" required minlength="3" maxlength="100"
-                                    >
+                                <input type="text" class="form-control" name="diachi" required minlength="3" maxlength="100" value="<?=$address?>">
                             </div>
                             <div class="col-md-12">
                                 <label for="kh_dienthoai">Điện thoại</label>
-                                <input type="tel" class="form-control" name="tel" required pattern="[0-9]{3}[0-9]{3}[0-9]{4}"  id="phone">
-
+                                <input type="tel" class="form-control" name="tel" required pattern="[0-9]{3}[0-9]{3}[0-9]{4}"  id="phone"  value="<?=$tel?>">
+                                
                             </div>
                             <div class="col-md-12">
                                 <label for="kh_email">Email</label>
