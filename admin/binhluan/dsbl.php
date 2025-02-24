@@ -34,7 +34,7 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="product-status-wrap">
-                            <h4>DANH SÁCH SẢN PHẨM</h4>
+                            <h4>DANH SÁCH BÌNH LUẬN</h4>
                             <table>
                                 <!-- <tr>
                                     <form role="search" action="index.php?act=dssp" method="POST" class="">

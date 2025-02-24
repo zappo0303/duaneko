@@ -121,30 +121,38 @@
                         </table>
                         <br>
                         <h4>ĐƠN HÀNG THEO NGÀY:</h4>
-                        <table>
-                            <tr>
-                                <th>NGÀY ĐẶT HÀNG</th>
-                                <th>SỐ LƯỢNG ĐƠN HÀNG</th>
-                                <th>GIÁ CAO NHẤT</th>
-                                <th>GIÁ THẤP NHẤT</th>
-                                <th>TỔNG THU</th>
-                            </tr>
-                            <?php 
-                    foreach ($thongkedh as $thongke) {
-                        extract($thongke);
-                        $maxtong=number_format($maxtong,3);
-                        $mintong=number_format($mintong,3);
-                        $tongtien=number_format($tongtien,3,",");
-                        echo '<tr>
+    <table>
+        <tr>
+            <th>NGÀY ĐẶT HÀNG</th>
+            <th>SỐ LƯỢNG ĐƠN HÀNG</th>
+            <th>GIÁ CAO NHẤT</th>
+            <th>GIÁ THẤP NHẤT</th>
+            <th>TỔNG THU</th>
+        </tr>
+        <?php 
+        if (isset($thongkedh) && is_array($thongkedh)) { 
+            if (!empty($thongkedh)) { // Kiểm tra xem có dữ liệu không
+                foreach ($thongkedh as $thongke) {
+                    extract($thongke);
+                    $maxtong = number_format($maxtong, 3);
+                    $mintong = number_format($mintong, 3);
+                    $tongtien = number_format($tongtien, 3, ",");
+                    echo '<tr>
                         <td>'.$ngay.'</td>
                         <td>'.$countbill.'</td>
                         <td>'.$maxtong.'</td>
                         <td>'.$mintong.'</td>
                         <td>'.$tongtien.'</td>
                     </tr>';
-                    }
-                ?>
-                        </table>
+                }
+            } else {
+                echo '<tr><td colspan="5">Không có dữ liệu</td></tr>';
+            }
+        } else {
+            echo '<tr><td colspan="5">Không có dữ liệu</td></tr>';
+        }
+        ?>
+    </table>
                         <br>
                         <h4>TỔNG SỐ ĐƠN HÀNG ĐÃ BÁN:</h4>
                         <table>

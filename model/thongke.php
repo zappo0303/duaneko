@@ -6,14 +6,6 @@
         $thongkedm=pdo_query($sql);
         return $thongkedm;
     }
-    // function loadall_thongke_dh(){
-    //     $sql= "select date(bill.ngaydathang) as ngay, count(bill.id) as countbill,min(bill.tongthanhtoan) as mintong, max(bill.tongthanhtoan) as maxtong, sum(bill.tongthanhtoan) as tongtien ";
-    //     $sql.= "from bill ";
-    //     $sql.= "group by ngay";
-    //     // $sql.= "ORDER BY bill.id by bill.ngaydathang desc";
-    //     $thongkedh=pdo_query($sql);
-    //     return $thongkedh;
-    // }
     function thang(){
         $sql= "select month(bill.ngaydathang) as ngay, count(bill.id) as countbill,min(bill.tongthanhtoan) as mintong, max(bill.tongthanhtoan) as maxtong, sum(bill.tongthanhtoan) as tongtien ";
         $sql.= "from bill ";
@@ -29,6 +21,14 @@
             // $sql.= "ORDER BY bill.id by bill.ngaydathang desc";
             $thongkenam=pdo_query($sql);
             return $thongkenam;
+        }
+        function loadall_thongke_dh(){
+            $sql= "select date(bill.ngaydathang) as ngay, count(bill.id) as countbill,min(bill.tongthanhtoan) as mintong, max(bill.tongthanhtoan) as maxtong, sum(bill.tongthanhtoan) as tongtien ";
+            $sql.= "from bill ";
+            $sql.= "group by ngay";
+            // $sql.= "ORDER BY bill.id by bill.ngaydathang desc";
+            $thongkedh=pdo_query($sql);
+            return $thongkedh;
         }
     function tongdon(){
         $sql= "select count(bill.id) as tongsobill,sum(bill.tongthanhtoan) as tong from bill";

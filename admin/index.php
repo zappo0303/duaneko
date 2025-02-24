@@ -10,7 +10,7 @@
     include "header.php";
     $listbill=loadall_bill("",0); 
                 $tongsobill=tongdon();
-                // $thongkedh=loadall_thongke_dh();
+                $thongkedh=loadall_thongke_dh();
                 $thongkedm=loadall_thongke_dm();
                 $demsp=sosanpham();
 
@@ -244,7 +244,7 @@
                 $tkthang=thang();
                 $thongkenam=nam();
                 $tongsobill=tongdon();
-                // $thongkedh=loadall_thongke_dh();
+                $thongkedh=loadall_thongke_dh();
                 $thongkedm=loadall_thongke_dm();  
                 include "thongke/list.php";
                 break;
