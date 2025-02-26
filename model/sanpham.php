@@ -53,3 +53,8 @@ function loadone_spcl($id,$iddm){
             $sql= "UPDATE sanpham SET iddm='".$iddm."',name='".$tensp."',price='".$price."',mota='".$motasp."',soluong='".$soluong."' WHERE id= ".$id;
         pdo_execute($sql);   
     }
+
+function search_sp($keyword) {
+    $sql = "SELECT * FROM sanpham WHERE name LIKE '%$keyword%'";
+    return pdo_query($sql);
+}

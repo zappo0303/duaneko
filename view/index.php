@@ -253,7 +253,16 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
                 }
                     $dsbill=loadall_dh($_SESSION['email']['id']);
                     include "cart/mybill.php";
-                    break;   
+                    break; 
+            case "search":
+                        if (isset($_POST['keyword']) && !empty($_POST['keyword'])) {
+                            $keyword = $_POST['keyword'];
+                            $listsp = search_sp($keyword);
+                        } else {
+                            $listsp = [];
+                        }
+                        include "search.php";
+                        break;
         }
             
          }else{
@@ -263,3 +272,30 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
 
             ob_end_flush(); 
     ?>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function () {
+    $("#searchInput").keyup(function () {
+        let keyword = $(this).val();
+        if (keyword.length > 1) {
+            $.ajax({
+                url: "search.php",
+                method: "POST",
+                data: { keyword: keyword },
+                success: function (data) {
+                    $("#searchResults").html(data).fadeIn();
+                }
+            });
+        } else {
+            $("#searchResults").fadeOut();
+        }
+    });
+
+    // Ẩn danh sách kết quả khi click ra ngoài
+    $(document).on("click", function (e) {
+        if (!$(e.target).closest("#searchResults, #searchInput").length) {
+            $("#searchResults").fadeOut();
+        }
+    });
+});
+</script>

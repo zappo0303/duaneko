@@ -82,8 +82,8 @@
                                     value="<?=$email?>" readonly="">
                             </div>
                         </div>
-                    
-                        <h4 class="mb-3">Hình thức thanh toán</h4>
+                        <br>
+                        <h4 class="mb-3">Phương thức thanh toán</h4>
 
                         <div class="d-block my-3">
                             <div class="custom-control custom-radio">
@@ -93,14 +93,14 @@
                                     <!-- <label class="custom-control-label" for="httt-1" name="tienmat">Tiền mặt </label> -->
                             </div>
                             <p></p>
-                            <div class="custom-control custom-radio">
+                            <!-- <div class="custom-control custom-radio">
                                 <input id="httt-2" name="pttt" type="radio" class="custom-control-input" required=""
                                     value="1">
         
                                     <a href="./thanhtoandonhangol.php" class="btn btn-primary btn-lg btn-block" name="thanhtoandonhangol" value="" >Thanh toán bằng ví MOMO</a> 
                                     <!-- <input class="btn btn-primary btn-lg btn-block" type="submit" name="thanhtoandonhangol"  value="Thanh toán bằng ví MOMO" > -->
                                     <!-- <label class="custom-control-label" for="httt-2" name="thanhtoandonhangol" >Thanh toán bằng ví MOMO</label> -->
-                            </div>
+                            </div> 
                             <!-- <div class="custom-control custom-radio">
                                 <input id="httt-3" name="pttt" type="radio" class="custom-control-input" required=""
                                     value="2">
