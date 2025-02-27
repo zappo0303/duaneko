@@ -73,7 +73,6 @@
                                                              <?php 
                                                              if (isset($taikhoan['role'])) {
                                                                         echo '<option value="0">Khách Hàng</option>
-                                                                        <option value="1">Nhân Viên</option>
                                                                         <option value="2">Admin</option>
                                                                         ';
                                                                         

@@ -26,13 +26,11 @@
                         <table>
                                 
                         <tr>
-                        
+                            <th>STT</th>
                             <th>Tên Món</th>    
                             <th>Ảnh</th>
                             <th>Giá</th>
-                            <th></th>
                             <th>Số Lượng</th>
-                            <th></th>
                             <th>Thành Tiền</th>
                         </tr>
                 
